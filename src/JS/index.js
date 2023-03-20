@@ -1,20 +1,14 @@
-//OBJETIVO - quando clicar no botão mostrar a imagem de fundo correspondente
-
 const botoesCarrossel = document.querySelectorAll('.botao');
 const imagens = document.querySelectorAll('.imagem')
 
 botoesCarrossel.forEach((botao, indice) => {
     botao.addEventListener('click', () => {
-
         desativarBotaoSelecionado();
-
         selecionarBotaoCarrossel(botao);
-
         esconderImagemAtiva();
-        
         mostrarImagemDeFundo(indice);
-    })
-})
+    });
+});
 
 function mostrarImagemDeFundo(indice) {
     imagens[indice].classList.add('ativo');
